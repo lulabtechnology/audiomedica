@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-brand-light text-slate-900 antialiased;
+}
+
+/* Contenedor central */
+.container-page {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Tarjetas bonitas reutilizables */
+.section-card {
+  @apply bg-white/80 backdrop-blur-sm rounded-3xl shadow-soft border border-slate-100;
+}
+
+/* Gradiente suave de fondo principal */
+.page-gradient {
+  @apply bg-gradient-to-b from-white via-sky-50/60 to-slate-100;
+}
+
+/* Títulos de sección */
+.section-title {
+  @apply text-center;
+}
+
+.section-title h2 {
+  @apply text-3xl md:text-4xl font-semibold tracking-tight text-brand-primary;
+}
+
+.section-title p {
+  @apply mt-3 text-base md:text-lg text-slate-600 max-w-2xl mx-auto;
+}
+
+/* Botones */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm md:text-base font-semibold text-white shadow-md shadow-brand-primary/30 transition hover:bg-brand-secondary hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-full border border-brand-primary/40 bg-white/70 px-6 py-3 text-sm md:text-base font-semibold text-brand-primary shadow-sm transition hover:bg-brand-primary/5 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2;
+}
+
+/* Chips */
+.chip-soft {
+  @apply inline-flex items-center gap-2 rounded-full bg-brand-primary/5 px-3 py-1 text-xs font-medium text-brand-primary;
+}
