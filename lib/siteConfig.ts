@@ -12,7 +12,7 @@ export const siteConfig = {
     phoneDisplay: "+507 262-8224",
     email: "info@audiomedica.com.pa",
     address:
-      "Av. Balboa con Av. Italia, PH Plaza Comercial Paitilla, Piso 2, Ofic. 78, Paitilla. San Francisco, Ciudad de Panamá."
+      "Av Balboa con Av Italia, PH Plaza Comercial Paitilla, Piso 2, Ofic. 78, Paitilla. San Francisco. Ciudad de Panamá."
   },
   services: [
     {

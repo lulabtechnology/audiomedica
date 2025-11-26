@@ -7,6 +7,10 @@ export default function ContactSection() {
     contact.whatsappNumber
   }?text=${encodeURIComponent(contact.whatsappMessage)}`;
 
+  // Nuevo link de mapa basado en la dirección completa
+  const mapUrl =
+    "https://www.google.com/maps/search/?api=1&query=Av+Balboa+con+Av+Italia,+PH+Plaza+Comercial+Paitilla,+Piso+2,+Ofic.+78,+Paitilla,+San+Francisco,+Ciudad+de+Panama";
+
   return (
     <div className="container-page">
       <div className="grid gap-8 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] items-stretch">
@@ -57,7 +61,7 @@ export default function ContactSection() {
             <div>
               <p className="font-semibold text-brand-primary">Horarios</p>
               <p>Lunes a viernes: 8:00 a.m. – 5:00 p.m.</p>
-              <p>Sábados: 8:00 a.m. – 1:00 p.m.</p>
+              <p>Sábados: 8:00 a.m. – 12:00 m.d.</p>
               <p className="text-xs text-slate-500 mt-1">
                 *Horarios de referencia, puedes ajustarlos según tu operación.
               </p>
@@ -74,7 +78,7 @@ export default function ContactSection() {
               Agendar por WhatsApp
             </a>
             <a
-              href="https://maps.app.goo.gl/D7MzCSEzxwtUE68S7"
+              href={mapUrl}
               target="_blank"
               rel="noreferrer"
               className="btn-outline"
