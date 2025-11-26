@@ -9,7 +9,11 @@ export default function ProcessSection() {
       text: "Te explicamos de forma clara tus resultados y las opciones de audífonos o protección."
     },
     {
-      title: "3. Adaptación y seguimiento",
+      title: "3. Prueba de audífonos GRATIS",
+      text: "Prueba los audífonos adaptados a tu necesidad auditiva antes de tomar una decisión."
+    },
+    {
+      title: "4. Adaptación y seguimiento",
       text: "Ajustamos los audífonos, te enseñamos a usarlos y damos seguimiento para tu comodidad."
     }
   ];
@@ -24,7 +28,7 @@ export default function ProcessSection() {
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-4">
         {steps.map((step) => (
           <div key={step.title} className="section-card p-5 md:p-6 space-y-3">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-brand-accent">
