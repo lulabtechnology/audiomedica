@@ -1,60 +1,101 @@
+// components/ProductsSection.tsx
+import Image from "next/image";
+
+type Product = {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  bullets?: string[];
+};
+
+const products: Product[] = [
+  {
+    id: "equipos-auditivos",
+    name: "Equipos de diagnóstico auditivo",
+    description:
+      "Tecnología de última generación para realizar pruebas objetivas y precisas en la evaluación de la audición.",
+    image: "/images/servicio-equipos-auditivos.jpg",
+    bullets: [
+      "Equipos para timpanometría e impedanciometría.",
+      "Sistemas para tamizaje auditivo neonatal.",
+      "Soluciones para clínicas, hospitales y consultorios."
+    ]
+  },
+  {
+    id: "equipos-visuales",
+    name: "Equipos de diagnóstico visual",
+    description:
+      "Equipos especializados para complementar la atención en salud visual dentro de tu práctica clínica.",
+    image: "/images/servicio-equipos-visuales.jpg",
+    bullets: [
+      "Equipos para medición y análisis de la superficie ocular.",
+      "Diseñados para entornos clínicos y de optometría.",
+      "Soporte en selección, instalación y puesta en marcha."
+    ]
+  },
+  {
+    id: "sistema-conduccion-osea",
+    name: "Sistema de conducción ósea",
+    description:
+      "Solución auditiva de alta gama basada en conducción ósea, ideal para casos seleccionados donde se busca una alternativa a la cirugía.",
+    image: "/images/servicio-sistema-conduccion-osea.jpg",
+    bullets: [
+      "Diadema ósea integrada: plena libertad de movimiento.",
+      "Todo en uno en una sola carcasa, sin cableado externo.",
+      "Resistente al agua y diseñada para uso diario.",
+      "Ancho de banda con alta frecuencia de transmisión.",
+      "La mejor alternativa a la cirugía en casos indicados.",
+      "Conexión inalámbrica vía Bluetooth."
+    ]
+  }
+];
+
 export default function ProductsSection() {
   return (
     <div className="container-page">
       <div className="section-title mb-10 md:mb-12">
-        <h2>Equipos para profesionales</h2>
+        <h2>Equipos y cabinas para profesionales</h2>
         <p>
-          AudioMédica también es un aliado para clínicas, hospitales y
-          profesionales de la salud auditiva y visual, ofreciendo soluciones
-          confiables y soporte cercano.
+          AudioMédica es tu aliado en la selección de equipos de diagnóstico
+          auditivo y visual, cabinas audiométricas y soluciones de conducción
+          ósea para tu consultorio o clínica.
         </p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
-        <div className="section-card p-5 md:p-6 flex flex-col gap-3">
-          <h3 className="text-base md:text-lg font-semibold text-brand-primary">
-            Equipos de diagnóstico auditivo
-          </h3>
-          <p className="text-sm text-slate-600">
-            Audiometría clínica, impedanciometría, otoemisiones acústicas y
-            otros equipos diagnósticos para una práctica moderna.
-          </p>
-          <ul className="mt-1 space-y-1 text-sm text-slate-600">
-            <li>• Audiometros clínicos y portátiles</li>
-            <li>• Impedanciómetros</li>
-            <li>• Equipos para tamizaje auditivo</li>
-          </ul>
-        </div>
+        {products.map((product) => (
+          <article
+            key={product.id}
+            className="section-card flex flex-col overflow-hidden"
+          >
+            {/* Imagen SIN recortes, respetando tamaño */}
+            <div className="relative w-full aspect-[4/3] bg-slate-50 flex items-center justify-center">
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                className="object-contain p-3"
+                sizes="(min-width: 1024px) 260px, (min-width: 768px) 33vw, 100vw"
+              />
+            </div>
 
-        <div className="section-card p-5 md:p-6 flex flex-col gap-3">
-          <h3 className="text-base md:text-lg font-semibold text-brand-primary">
-            Equipos para salud visual
-          </h3>
-          <p className="text-sm text-slate-600">
-            Equipos seleccionados para complementar tu práctica en salud
-            auditiva y visual.
-          </p>
-          <ul className="mt-1 space-y-1 text-sm text-slate-600">
-            <li>• Oftalmoscopios y retinoscopios</li>
-            <li>• Lámparas, lupas y accesorios</li>
-            <li>• Soporte en selección y puesta en marcha</li>
-          </ul>
-        </div>
+            <div className="flex flex-1 flex-col gap-2 p-5 md:p-6">
+              <h3 className="text-base md:text-lg font-semibold text-brand-primary">
+                {product.name}
+              </h3>
+              <p className="text-sm text-slate-600">{product.description}</p>
 
-        <div className="section-card p-5 md:p-6 flex flex-col gap-3">
-          <h3 className="text-base md:text-lg font-semibold text-brand-primary">
-            Cabinas audiométricas
-          </h3>
-          <p className="text-sm text-slate-600">
-            Cabinas insonorizadas para realizar estudios auditivos con la mejor
-            calidad de sonido y confort para tus pacientes.
-          </p>
-          <ul className="mt-1 space-y-1 text-sm text-slate-600">
-            <li>• Diseño y dimensiones adaptadas a tu espacio</li>
-            <li>• Instalación profesional</li>
-            <li>• Asesoría en mantenimiento y uso</li>
-          </ul>
-        </div>
+              {product.bullets && (
+                <ul className="mt-2 space-y-1 text-sm text-slate-600">
+                  {product.bullets.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   );
