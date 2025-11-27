@@ -1,3 +1,4 @@
+// lib/siteConfig.ts
 export const siteConfig = {
   name: "AudioMédica",
   shortName: "AudioMédica",
@@ -5,8 +6,8 @@ export const siteConfig = {
   description:
     "Centro especializado en salud auditiva: venta y adaptación de audífonos, evaluaciones auditivas completas y equipamiento médico para profesionales.",
   contact: {
-    // IMPORTANTE: reemplaza con el número real en formato 507XXXXXXXX
-    whatsappNumber: "50700000000", // REEMPLAZAR
+    // IMPORTANTE: mantén aquí el número correcto en formato internacional
+    whatsappNumber: "50700000000", // <- cámbialo si aún no lo hiciste
     whatsappMessage:
       "Hola AudioMédica, me gustaría agendar una cita de evaluación auditiva.",
     phoneDisplay: "+507 262-8224",
@@ -14,43 +15,46 @@ export const siteConfig = {
     address:
       "Av Balboa con Av Italia, PH Plaza Comercial Paitilla, Piso 2, Ofic. 78, Paitilla. San Francisco. Ciudad de Panamá."
   },
+
+  // SERVICIOS PRINCIPALES (ya con las nuevas imágenes y textos)
   services: [
     {
       id: "audiometria",
-      name: "Audiometría e Impedanciometría",
+      name: "Examen de audiometría",
       description:
-        "Evaluaciones completas del sistema auditivo para conocer tu nivel de audición y el estado del oído medio.",
+        "Evaluación del nivel de audición mediante sonidos de diferentes frecuencias e intensidades para conocer tu umbral auditivo.",
       image: "/images/servicio-audiometria.jpg"
+    },
+    {
+      id: "impedanciometria",
+      name: "Impedanciometría",
+      description:
+        "Prueba que evalúa el funcionamiento del oído medio ante cambios de presión y la respuesta a sonidos de alta intensidad. Recomendado en la evaluación de niños de 0 a 6 años y en quienes han tenido infecciones de oído.",
+      image: "/images/servicio-impedanciometro.jpg"
     },
     {
       id: "audifonos",
       name: "Venta y adaptación de audífonos",
       description:
-        "Audífonos modernos y discretos, ajustados a tu pérdida auditiva y estilo de vida.",
+        "Audífonos modernos con conectividad Bluetooth, recargables y compatibles con Android y iPhone, adaptados a tu pérdida auditiva y estilo de vida.",
       image: "/images/servicio-audifonos.jpg"
     },
     {
       id: "protectores",
       name: "Protectores auditivos a la medida",
       description:
-        "Protección personalizada contra ruido y agua para trabajo, descanso o deporte.",
+        "Protectores personalizados contra ruido y agua para trabajo, descanso, práctica musical y actividades deportivas.",
       image: "/images/servicio-protectores.jpg"
-    },
-    {
-      id: "equipos",
-      name: "Equipos de diagnóstico auditivo y visual",
-      description:
-        "Tecnología de última generación para profesionales en salud auditiva y visual.",
-      image: "/images/servicio-equipos.jpg"
     },
     {
       id: "cabinas",
       name: "Cabinas insonorizadas",
       description:
-        "Diseño, venta e instalación de cabinas audiométricas con estándares clínicos.",
+        "Cabinas audiométricas diseñadas para realizar estudios auditivos con el aislamiento acústico y confort que tus pacientes necesitan.",
       image: "/images/servicio-cabina.jpg"
     }
   ],
+
   highlights: [
     "Equipo profesional especializado en salud auditiva.",
     "Tecnología de vanguardia en diagnóstico y audífonos.",
