@@ -1,3 +1,4 @@
+// components/ServicesSection.tsx
 import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
 
@@ -9,8 +10,8 @@ export default function ServicesSection() {
       <div className="section-title mb-10 md:mb-12">
         <h2>Servicios de salud auditiva</h2>
         <p>
-          Desde la evaluación inicial hasta la adaptación de audífonos y
-          protectores, te acompañamos en cada paso para mejorar tu audición.
+          Evaluaciones completas, adaptación de audífonos y soluciones de
+          protección auditiva para cuidar tu audición en cada etapa de la vida.
         </p>
       </div>
 
@@ -20,15 +21,17 @@ export default function ServicesSection() {
             key={service.id}
             className="section-card flex flex-col overflow-hidden"
           >
-            <div className="relative h-40 w-full">
+            {/* Imagen SIN recortes, manteniendo proporción */}
+            <div className="relative w-full aspect-[4/3] bg-slate-50 flex items-center justify-center">
               <Image
                 src={service.image}
                 alt={service.name}
                 fill
-                className="object-cover"
+                className="object-contain p-3"
                 sizes="(min-width: 1024px) 260px, (min-width: 768px) 50vw, 100vw"
               />
             </div>
+
             <div className="flex flex-1 flex-col gap-2 p-5 md:p-6">
               <h3 className="text-base md:text-lg font-semibold text-brand-primary">
                 {service.name}
