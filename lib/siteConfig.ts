@@ -6,8 +6,8 @@ export const siteConfig = {
   description:
     "Centro especializado en salud auditiva: venta y adaptación de audífonos, evaluaciones auditivas completas y equipamiento médico para profesionales.",
   contact: {
-    // IMPORTANTE: mantén aquí el número correcto en formato internacional
-    whatsappNumber: "50700000000", // <- cámbialo si aún no lo hiciste
+    // WhatsApp configurado a 6876-9677 (formato internacional para wa.me)
+    whatsappNumber: "50768769677",
     whatsappMessage:
       "Hola AudioMédica, me gustaría agendar una cita de evaluación auditiva.",
     phoneDisplay: "+507 262-8224",
@@ -16,7 +16,7 @@ export const siteConfig = {
       "Av Balboa con Av Italia, PH Plaza Comercial Paitilla, Piso 2, Ofic. 78, Paitilla. San Francisco. Ciudad de Panamá."
   },
 
-  // SERVICIOS PRINCIPALES (ya con las nuevas imágenes y textos)
+  // SERVICIOS DE SALUD AUDITIVA
   services: [
     {
       id: "audiometria",
@@ -26,11 +26,14 @@ export const siteConfig = {
       image: "/images/servicio-audiometria.jpg"
     },
     {
-      id: "impedanciometria",
-      name: "Impedanciometría",
+      id: "examen-impedanciometria",
+      name: "Examen de impedanciometría",
       description:
-        "Prueba que evalúa el funcionamiento del oído medio ante cambios de presión y la respuesta a sonidos de alta intensidad. Recomendado en la evaluación de niños de 0 a 6 años y en quienes han tenido infecciones de oído.",
-      image: "/images/servicio-impedanciometro.jpg"
+        "Prueba que evalúa el funcionamiento del oído medio ante cambios de presión y su respuesta a sonidos de alta intensidad. Recomendada en la evaluación de niños de 0 a 6 años y en quienes han tenido infecciones de oído.",
+      // 🔹 NUEVA IMAGEN QUE EL CLIENTE QUIERE PARA ESTE EXAMEN
+      // Sube el archivo que te enviaron a esta ruta:
+      // public/images/servicio-examen-impedanciometria.jpg
+      image: "/images/servicio-examen-impedanciometria.jpg"
     },
     {
       id: "audifonos",
@@ -47,11 +50,11 @@ export const siteConfig = {
       image: "/images/servicio-protectores.jpg"
     },
     {
-      id: "cabinas",
-      name: "Cabinas insonorizadas",
+      id: "sistema-conduccion-osea",
+      name: "Sistema de conducción ósea",
       description:
-        "Cabinas audiométricas diseñadas para realizar estudios auditivos con el aislamiento acústico y confort que tus pacientes necesitan.",
-      image: "/images/servicio-cabina.jpg"
+        "Sistema auditivo de alta gama basado en conducción ósea, ideal como alternativa a la cirugía en casos seleccionados. Diadema ósea integrada, sin cableado externo, resistente al agua y con conexión inalámbrica vía Bluetooth.",
+      image: "/images/servicio-sistema-conduccion-osea.jpg"
     }
   ],
 
