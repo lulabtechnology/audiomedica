@@ -35,18 +35,28 @@ const products: Product[] = [
     ]
   },
   {
-    id: "sistema-conduccion-osea",
-    name: "Sistema de conducción ósea",
+    id: "impedanciometro",
+    name: "Impedanciómetro",
     description:
-      "Solución auditiva de alta gama basada en conducción ósea, ideal para casos seleccionados donde se busca una alternativa a la cirugía.",
-    image: "/images/servicio-sistema-conduccion-osea.jpg",
+      "Equipo diseñado para realizar pruebas de impedanciometría de forma rápida y confiable, evaluando el funcionamiento del oído medio.",
+    // 🔹 AQUÍ USAMOS LA FOTO QUE ANTES ERA DE IMPEDANCIOMETRÍA
+    image: "/images/servicio-impedanciometro.jpg",
     bullets: [
-      "Diadema ósea integrada: plena libertad de movimiento.",
-      "Todo en uno en una sola carcasa, sin cableado externo.",
-      "Resistente al agua y diseñada para uso diario.",
-      "Ancho de banda con alta frecuencia de transmisión.",
-      "La mejor alternativa a la cirugía en casos indicados.",
-      "Conexión inalámbrica vía Bluetooth."
+      "Permite evaluar la movilidad del tímpano y la cadena osicular.",
+      "Ideal para consultas de otorrinolaringología y audiología.",
+      "Modelos portátiles y de mesa según la necesidad del servicio."
+    ]
+  },
+  {
+    id: "cabinas-insonorizadas",
+    name: "Cabinas insonorizadas",
+    description:
+      "Cabinas audiométricas diseñadas para realizar estudios auditivos con el aislamiento acústico y confort que tus pacientes necesitan.",
+    image: "/images/servicio-cabina.jpg",
+    bullets: [
+      "Diseño modular adaptable al espacio disponible.",
+      "Aislamiento acústico de alto desempeño.",
+      "Instalación profesional y asesoría en uso y mantenimiento."
     ]
   }
 ];
@@ -58,18 +68,17 @@ export default function ProductsSection() {
         <h2>Equipos y cabinas para profesionales</h2>
         <p>
           AudioMédica es tu aliado en la selección de equipos de diagnóstico
-          auditivo y visual, cabinas audiométricas y soluciones de conducción
-          ósea para tu consultorio o clínica.
+          auditivo y visual, impedanciómetros y cabinas insonorizadas para tu
+          consultorio o clínica.
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {products.map((product) => (
           <article
             key={product.id}
             className="section-card flex flex-col overflow-hidden"
           >
-            {/* Imagen SIN recortes, respetando tamaño */}
             <div className="relative w-full aspect-[4/3] bg-slate-50 flex items-center justify-center">
               <Image
                 src={product.image}
