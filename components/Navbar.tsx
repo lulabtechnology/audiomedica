@@ -7,28 +7,24 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
       <div className="container-page flex flex-col items-center gap-3 py-3 md:py-4">
-        {/* Logo + nombre centrado y GRANDE */}
-        <div className="flex flex-col items-center gap-2">
-          <div className="relative h-16 w-16 md:h-24 md:w-24">
+        {/* LOGO SOLO, GRANDE Y CENTRADO */}
+        <div className="flex flex-col items-center">
+          <div className="relative h-20 w-20 md:h-28 md:w-28 lg:h-32 lg:w-32">
             <Image
               src="/images/logo-audiomedica.png"
-              alt="Logo AudioMédica"
+              alt="AudioMédica - Salud auditiva y equipos médicos"
               fill
-              sizes="96px"
+              sizes="(min-width: 1024px) 128px, (min-width: 768px) 112px, 80px"
               className="object-contain"
             />
           </div>
-          <div className="text-center leading-tight">
-            <span className="block text-xl md:text-3xl font-semibold text-brand-primary">
-              {siteConfig.name}
-            </span>
-            <span className="block text-xs md:text-sm text-slate-500">
-              Salud auditiva & equipos médicos
-            </span>
-          </div>
+          {/* Texto solo accesible (no visible) para cumplir con lo que pidió el cliente */}
+          <span className="sr-only">
+            {siteConfig.name} · Salud auditiva y equipos médicos
+          </span>
         </div>
 
-        {/* Menú simple, sin botón de WhatsApp */}
+        {/* Menú */}
         <nav className="flex flex-wrap justify-center gap-5 text-xs md:text-sm font-medium text-slate-700">
           <Link href="#servicios" className="hover:text-brand-primary">
             Servicios
