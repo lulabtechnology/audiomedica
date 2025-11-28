@@ -10,8 +10,9 @@ export default function ServicesSection() {
       <div className="section-title mb-10 md:mb-12">
         <h2>Servicios de salud auditiva</h2>
         <p>
-          Evaluaciones completas, adaptación de audífonos y soluciones de
-          protección auditiva para cuidar tu audición en cada etapa de la vida.
+          Evaluaciones completas, adaptación de audífonos, protectores
+          personalizados y soluciones de conducción ósea para cuidar tu
+          audición.
         </p>
       </div>
 
@@ -21,7 +22,6 @@ export default function ServicesSection() {
             key={service.id}
             className="section-card flex flex-col overflow-hidden"
           >
-            {/* Imagen SIN recortes, manteniendo proporción */}
             <div className="relative w-full aspect-[4/3] bg-slate-50 flex items-center justify-center">
               <Image
                 src={service.image}
