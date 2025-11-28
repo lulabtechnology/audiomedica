@@ -7,18 +7,17 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
       <div className="container-page flex flex-col items-center gap-3 py-3 md:py-4">
-        {/* LOGO SOLO, GRANDE Y CENTRADO */}
+        {/* LOGO SOLO, MÁS GRANDE Y CENTRADO */}
         <div className="flex flex-col items-center">
-          <div className="relative h-20 w-20 md:h-28 md:w-28 lg:h-32 lg:w-32">
+          <div className="relative h-24 w-24 md:h-32 md:w-32 lg:h-36 lg:w-36">
             <Image
               src="/images/logo-audiomedica.png"
               alt="AudioMédica - Salud auditiva y equipos médicos"
               fill
-              sizes="(min-width: 1024px) 128px, (min-width: 768px) 112px, 80px"
+              sizes="(min-width: 1024px) 144px, (min-width: 768px) 128px, 96px"
               className="object-contain"
             />
           </div>
-          {/* Texto solo accesible (no visible) para cumplir con lo que pidió el cliente */}
           <span className="sr-only">
             {siteConfig.name} · Salud auditiva y equipos médicos
           </span>
