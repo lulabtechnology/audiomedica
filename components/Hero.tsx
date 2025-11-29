@@ -99,22 +99,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Badge flotante */}
-          <div className="absolute -bottom-4 -right-2 md:-right-6">
-            <div className="rounded-2xl bg-white/95 px-4 py-3 shadow-soft border border-slate-100 text-xs md:text-sm flex items-center gap-3">
-              <div className="h-8 w-8 rounded-full bg-brand-primary/10 flex items-center justify-center">
-                <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              </div>
-              <div>
-                <p className="font-semibold text-slate-800">
-                  Citas por WhatsApp
-                </p>
-                <p className="text-slate-500">
-                  Respuesta rápida y acompañamiento cercano.
-                </p>
-              </div>
-            </div>
-          </div>
+          {/* ➜ Badge de “Citas por WhatsApp” eliminado */}
         </div>
       </div>
     </section>
