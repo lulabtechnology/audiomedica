@@ -7,14 +7,14 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
       <div className="container-page flex flex-col items-center gap-3 py-3 md:py-4">
-        {/* LOGO SOLO, MÁS GRANDE Y CENTRADO */}
+        {/* LOGO SOLO, 50% MÁS GRANDE */}
         <div className="flex flex-col items-center">
-          <div className="relative h-24 w-24 md:h-32 md:w-32 lg:h-36 lg:w-36">
+          <div className="relative h-36 w-36 md:h-48 md:w-48 lg:h-56 lg:w-56">
             <Image
               src="/images/logo-audiomedica.png"
               alt="AudioMédica - Salud auditiva y equipos médicos"
               fill
-              sizes="(min-width: 1024px) 144px, (min-width: 768px) 128px, 96px"
+              sizes="(min-width: 1024px) 224px, (min-width: 768px) 192px, 144px"
               className="object-contain"
             />
           </div>
